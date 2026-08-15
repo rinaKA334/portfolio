@@ -379,12 +379,7 @@ function petLove(){
 }
 qs('#pixelPet').addEventListener('click',petLove);
 
-/* ФОТО кейсов.
-   mob: — мобильные версии UI-скриншотов в большем масштабе.
-   Положи файлы: images/portfolio_ui_cardy_mobile.png
-                 images/portfolio_ui_mospoly_mobile.png
-   Если файла нет — автоматически покажется десктопная версия. */
-var COVERS={campus:'images/portfolio_main_mospoly.png',cardy:'images/portfolio_main_cardy.png'};
+var COVERS={campus:'/.netlify/images?url=/images/portfolio_main_mospoly.png&w=800&q=80',cardy:'/.netlify/images?url=/images/portfolio_main_cardy.png&w=800&q=80'};
 var HOVERS={campus:'images/portfolio_hover_mospoly.png',cardy:'images/portfolio_hover_cardy.png'};
 
 var PROJECTS={
@@ -422,7 +417,7 @@ var PROJECTS={
       {cells:['элементы','способы: по номеру телефона, по почте','']}
     ]}
   ],links:[{label:'путь пользователя (Docs)',url:LINKS.cardyCjmDocs}],shots:[]},
-  {title:'03. Wireframes & UI',topLinks:[{label:'итоговый дизайн (Figma)',url:LINKS.cardyFinalFigma}],paras:['Создала вайрфреймы на основе собранных данных. Опираясь на них, создала итоговый вид сервиса.'],shots:[{src:'images/portfolio_ui_cardy.png',mob:'images/portfolio_ui_cardy_mobile.png',cap:'вайрфреймы и финальные экраны'}]}]},
+  {title:'03. Wireframes & UI',topLinks:[{label:'итоговый дизайн (Figma)',url:LINKS.cardyFinalFigma}],paras:['Создала вайрфреймы на основе собранных данных. Опираясь на них, создала итоговый вид сервиса.'],shots:[{src:'/.netlify/images?url=/images/portfolio_ui_cardy.png&w=800&q=80',mob:'images/portfolio_ui_cardy_mobile.png',cap:'вайрфреймы и финальные экраны'}]}]},
  campus:{num:'01',title:'MosPoly App',cat:'приложение для студентов · 2025',role:'UX/UI концепция',stack:'Figma, Miro',task:'Упростить учебную жизнь студентов посредством удобного сервиса.',process:'Анализ конкурентов, упор на приятный UI.',stages:[
   {title:'01. Анализ конкурентов',topLinks:[{label:'анализ конкурентов (Figma)',url:LINKS.mospolyAnalysisFigma}],paras:['Изучила прямые и косвенные приложения: какие функции стоит перенять, а каких не хватает. Вся информация — в таблице ниже.'],tables:[
     {headers:['конкуренты','что удобно','что неудобно'],rows:[[
@@ -434,7 +429,7 @@ var PROJECTS={
       '— доступ к учебным материалам<br>— запись на проектную деятельность/элективы прямо в приложении<br>— электронная библиотека']]}
   ],shots:[]},
   {title:'02. Wireframes',paras:['Создала вайрфреймы для необходимых экранов, закрывающих базовые потребности студентов. Продумала логику переходов и структуру приложения.'],shots:[{src:'images/portfolio_wireframes_mospoly.png',cap:'вайрфреймы основных экранов'}]},
-  {title:'03. UI-дизайн',topLinks:[{label:'итоговый дизайн (Figma)',url:LINKS.mospolyFinalFigma}],paras:['Опираясь на вайрфреймы, создала итоговый вид вкладок. Спроектировала дополнительные экраны для облегчения рутины студентов, сделав упор на приятный и понятный интерфейс.'],shots:[{src:'images/portfolio_ui_mospoly.png',mob:'images/portfolio_ui_mospoly_mobile.png',cap:'финальные экраны приложения'}]}]}};
+  {title:'03. UI-дизайн',topLinks:[{label:'итоговый дизайн (Figma)',url:LINKS.mospolyFinalFigma}],paras:['Опираясь на вайрфреймы, создала итоговый вид вкладок. Спроектировала дополнительные экраны для облегчения рутины студентов, сделав упор на приятный и понятный интерфейс.'],shots:[{src:'/.netlify/images?url=/images/portfolio_ui_mospoly.png&w=800&q=80',mob:'images/portfolio_ui_mospoly_mobile.png',cap:'финальные экраны приложения'}]}]}};
 var ORDER=['campus','cardy'];
 
 /* Lenis */
