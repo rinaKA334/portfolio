@@ -1,19 +1,4 @@
-
-                        <!DOCTYPE html>
-                        <html lang="en">
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <style>
-                body {
-                  background-color: white; /* Ensure the iframe has a white background */
-                }
-
-                
-              </style>
-                        </head>
-                        <body>
-                            <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
@@ -55,7 +40,7 @@ h1,h2,h3{font-family:var(--disp);text-transform:uppercase;line-height:1.1;font-w
 .pre-bar{width:120px;height:2px;background:rgba(0,0,0,.1);overflow:hidden}
 .pre-bar i{display:block;height:100%;background:var(--ink);transform-origin:left;transform:scaleX(0)}
 
-/* ---------- Мобильный фикс-бар с контактами ---------- */
+/* ---------- Мобильный фикс-бар ---------- */
 .mobile-bar{display:none;position:fixed;top:0;left:0;right:0;z-index:1500;height:56px;background:rgba(250,250,250,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.06);align-items:center;justify-content:space-between;padding:0 16px;gap:10px}
 .mb-contacts{display:flex;gap:8px;align-items:center}
 .mb-btn{font-family:var(--mono);font-size:11px;color:var(--ink);padding:8px 12px;border:1px solid rgba(0,0,0,.1);border-radius:100px;background:rgba(255,255,255,.7);transition:background .2s}
@@ -95,44 +80,33 @@ body.case-open .site{display:none}
 .acid-text{color:transparent;-webkit-text-stroke:1.5px var(--ink);display:inline-block;transition:color 1.2s cubic-bezier(.25,1,.5,1),text-shadow 1.2s cubic-bezier(.25,1,.5,1),-webkit-text-stroke 1.2s cubic-bezier(.25,1,.5,1)}
 .acid-text:hover{-webkit-text-stroke:0px transparent;color:var(--ink);text-shadow:0 0 25px rgba(233,242,107,.9),0 0 10px rgba(233,242,107,.5)}
 .contact-text{font-size:clamp(16px,2vw,20px);color:var(--muted);max-width:600px;position:relative;z-index:1}
-.works-link-btn{display:inline-block;margin-top:32px;font-family:var(--mono);font-size:12px;color:var(--ink);border-bottom:1px solid var(--ink);transition:background-color .3s,border-color .3s,padding .3s,margin .3s,border-radius .3s;position:relative;z-index:1}
-.works-link-btn:hover{border-color:transparent;background:var(--acid);padding:4px 8px;margin-left:-8px;margin-right:-8px;border-radius:4px}
 
-/* ---------- Навыки ---------- */
-.skills{max-width:900px;width:100%}
-.sec-label{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:24px;text-transform:lowercase}
-.skills-area{position:relative;width:100%;height:400px;margin-bottom:60px}
-.floating-skill{position:absolute;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--ink);border-radius:50%;background:transparent;color:rgba(22,22,22,.4);font-family:var(--mono);font-size:11px;text-align:center;padding:10px;box-sizing:border-box;transition:filter .6s cubic-bezier(.25,1,.5,1),color .6s ease,transform .4s cubic-bezier(.34,1.56,.64,1);filter:blur(2px);z-index:1}
-.floating-skill:hover,.floating-skill.auto-focus{filter:blur(0);color:var(--ink)}
-.floating-skill:hover{z-index:10;transform:scale(1.15)!important;animation-play-state:paused!important}
-@keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(15px,-20px)}}
-@keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,15px)}}
-@keyframes float3{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,25px)}}
-@keyframes float4{0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,-15px)}}
-.fs-1{width:90px;height:90px;top:10%;left:5%;animation:float1 6s ease-in-out infinite}
-.fs-2{width:110px;height:110px;top:5%;left:25%;animation:float2 7s ease-in-out infinite 1s}
-.fs-3{width:80px;height:80px;top:15%;left:48%;animation:float3 5.5s ease-in-out infinite .5s}
-.fs-4{width:100px;height:100px;top:0%;left:68%;animation:float4 8s ease-in-out infinite 2s}
-.fs-5{width:85px;height:85px;top:25%;left:85%;animation:float1 6.5s ease-in-out infinite 1.5s}
-.fs-6{width:95px;height:95px;top:40%;left:15%;animation:float3 7.5s ease-in-out infinite .2s}
-.fs-7{width:120px;height:120px;top:35%;left:38%;animation:float2 6s ease-in-out infinite 2.5s}
-.fs-8{width:75px;height:75px;top:45%;left:60%;animation:float4 5s ease-in-out infinite 1s}
-.fs-9{width:105px;height:105px;top:30%;left:75%;animation:float1 7s ease-in-out infinite .8s}
-.fs-10{width:80px;height:80px;top:65%;left:5%;animation:float2 6.2s ease-in-out infinite 1.2s}
-.fs-11{width:90px;height:90px;top:70%;left:28%;animation:float4 5.8s ease-in-out infinite .4s}
-.fs-12{width:115px;height:115px;top:60%;left:50%;animation:float3 7.2s ease-in-out infinite 1.8s}
-.fs-13{width:85px;height:85px;top:75%;left:72%;animation:float1 6.8s ease-in-out infinite .6s}
-.fs-14{width:95px;height:95px;top:65%;left:88%;animation:float2 5.5s ease-in-out infinite 2.2s}
-.skills-area-process{position:relative;width:100%;height:200px}
-.fp-1{width:100px;height:100px;top:10%;left:10%;animation:float3 6s ease-in-out infinite}
-.fp-2{width:90px;height:90px;top:20%;left:35%;animation:float1 7s ease-in-out infinite 1s}
-.fp-3{width:110px;height:110px;top:5%;left:60%;animation:float4 5.5s ease-in-out infinite .5s}
-.fp-4{width:85px;height:85px;top:30%;left:80%;animation:float2 6.5s ease-in-out infinite 1.5s}
+/* Крупная кнопка «Смотреть работы» */
+.works-link-btn{display:inline-flex;align-items:center;gap:14px;margin-top:44px;font-family:var(--mono);font-size:15px;color:var(--ink);padding:20px 38px;border:1.5px solid var(--ink);border-radius:100px;background:transparent;transition:background .25s,transform .25s,box-shadow .25s;position:relative;z-index:1}
+.works-link-btn:hover{background:var(--acid);transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.works-link-btn .btn-arrow{font-size:18px;transition:transform .25s}
+.works-link-btn:hover .btn-arrow{transform:translateY(3px)}
+
+/* ---------- Навыки + 3D ---------- */
+.skills{max-width:1100px;width:100%}
+.sec-label{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:20px;text-transform:lowercase}
+.skills-cols{display:grid;grid-template-columns:1fr minmax(280px,420px);gap:clamp(24px,4vw,60px);align-items:start}
+.skills-group{margin-bottom:44px}
+.skills-group:last-child{margin-bottom:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{font-family:var(--mono);font-size:12px;color:var(--ink);padding:11px 20px;border:1px solid rgba(0,0,0,.18);border-radius:100px;background:var(--card);transition:background .3s,border-color .3s,transform .3s,color .3s}
+.chips span:hover,.chips span.hl{background:var(--acid);border-color:var(--ink);transform:translateY(-2px)}
+.chips.learning span{border-style:dashed;color:var(--muted);background:transparent}
+.chips.learning span:hover,.chips.learning span.hl{color:var(--ink);background:var(--acid);border-style:solid;border-color:var(--ink)}
+/* 3D-блок справа от скиллов */
+.model-box{position:relative;height:480px;border:1px dashed rgba(0,0,0,.15);border-radius:16px;overflow:hidden}
+.model-box canvas{display:block;width:100%;height:100%}
+.model-hint{position:absolute;bottom:10px;left:12px;right:12px;font-family:var(--mono);font-size:10px;color:var(--muted);pointer-events:none;line-height:1.5}
 
 /* ---------- Работы ---------- */
 .works{max-width:1000px;width:100%}
 .works-list{list-style:none;display:flex;flex-direction:column;border-top:1px solid rgba(0,0,0,.1)}
-.work-row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:40px 0;border-bottom:1px solid rgba(0,0,0,.1);transition:padding .3s ease; cursor: pointer;}
+.work-row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:40px 0;border-bottom:1px solid rgba(0,0,0,.1);transition:padding .3s ease;cursor:pointer}
 .work-row:hover{padding-left:20px}
 .work-info{display:flex;flex-direction:column;gap:8px;min-width:0}
 .work-title{font-family:var(--disp);font-size:clamp(20px,3vw,32px);font-weight:700;transition:color .2s}
@@ -173,7 +147,7 @@ body.case-open .case-page{display:block}
 img.zoomable{cursor:zoom-in}
 @media (pointer:fine){img.zoomable{cursor:none}}
 
-/* ---------- Лайтбокс: нативный pinch-zoom (два пальца) + колёсико ---------- */
+/* ---------- Лайтбокс ---------- */
 .lightbox{position:fixed;inset:0;background:rgba(250,250,250,.97);z-index:5000;display:none;flex-direction:column}
 .lightbox.open{display:flex}
 .lb-top{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid rgba(0,0,0,.08);font-family:var(--mono);font-size:11px;color:var(--muted)}
@@ -220,9 +194,8 @@ body.case-open .cp-top-fixed{display:flex}
   .case-page{margin-left:0;padding:76px 20px 110px}
   .work-preview{display:none!important}
   .bg-blur-circle{width:340px;height:340px;top:-80px;left:-60px}
-  .skills-area,.skills-area-process{height:auto;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-  .floating-skill{position:relative!important;top:auto!important;left:auto!important;animation:none!important;filter:blur(0)!important;color:var(--ink)!important;transform:none!important;width:88px!important;height:88px!important}
-  .floating-skill:hover{transform:scale(1.05)!important}
+  .skills-cols{grid-template-columns:1fr}
+  .model-box{height:320px;order:2}
   .cp-home-fixed{bottom:20px;right:20px}
   .cp-top-fixed{bottom:76px;right:20px}
   .cmp-table{min-width:560px}
@@ -233,6 +206,7 @@ body.case-open .cp-top-fixed{display:flex}
   .cp-title{font-size:clamp(26px,8vw,40px)}
   .work-row{padding:28px 0}
   .work-row:hover{padding-left:0}
+  .works-link-btn{padding:16px 28px;font-size:13px}
 }
 </style>
 </head>
@@ -281,17 +255,30 @@ body.case-open .cp-top-fixed{display:flex}
     <div class="greeting">* привет, я *</div>
     <h1 class="contact-title"> junior ux/ui <br><span class="acid-text">дизайнер</span></h1>
     <p class="contact-text">Учусь, практикую и проектирую мобильные приложения. Не боюсь никаких задач и очень хочу в настоящую команду.</p>
-    <a href="#works" data-scroll class="works-link-btn" data-hover="link">Смотреть работы ↓</a>
+    <a href="#works" data-scroll class="works-link-btn" data-hover="link">Смотреть работы <span class="btn-arrow">↓</span></a>
   </section>
 
   <section class="skills" id="skills">
-    <div class="sec-label">* хард скиллс *</div>
-    <div class="skills-area">
-      <div class="floating-skill fs-1">Figma</div><div class="floating-skill fs-2">Illustrator</div><div class="floating-skill fs-3">Photoshop</div><div class="floating-skill fs-4">After Effects</div><div class="floating-skill fs-5">A/B Тестирование</div><div class="floating-skill fs-6">Вёрстка</div><div class="floating-skill fs-7">Miro</div><div class="floating-skill fs-8">AI</div><div class="floating-skill fs-9">Wireframes</div><div class="floating-skill fs-10">User Flow</div><div class="floating-skill fs-11">Интервью</div><div class="floating-skill fs-12">UI-кит</div><div class="floating-skill fs-13">Auto Layout</div><div class="floating-skill fs-14">Адаптив</div>
-    </div>
-    <div class="sec-label">* изучаю *</div>
-    <div class="skills-area-process">
-      <div class="floating-skill fp-1">моушн-дизайн</div><div class="floating-skill fp-2">вайб-кодинг</div><div class="floating-skill fp-3">дизайн система</div><div class="floating-skill fp-4">3D</div>
+    <div class="skills-cols">
+      <div class="skills-left">
+        <div class="skills-group">
+          <div class="sec-label">* хард скиллс *</div>
+          <div class="chips">
+            <span>Figma</span><span>Illustrator</span><span>Photoshop</span><span>After Effects</span><span>A/B Тестирование</span><span>Вёрстка</span><span>Miro</span><span>AI</span><span>Wireframes</span><span>User Flow</span><span>Интервью</span><span>UI-кит</span><span>Auto Layout</span><span>Адаптив</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <div class="sec-label">* изучаю *</div>
+          <div class="chips learning">
+            <span>моушн-дизайн</span><span>вайб-кодинг</span><span>дизайн система</span><span>3D</span>
+          </div>
+        </div>
+      </div>
+      <!-- 3D-модель: images/shining_star.glb (GLB, до 2–3 МБ, идеально ≤1 МБ).
+           Если открыто через file:// — браузер блокирует .glb, нужна подача через локальный сервер. -->
+      <div class="model-box" id="modelBox">
+        <div class="model-hint" id="modelHint">3d · крутится само</div>
+      </div>
     </div>
   </section>
 
@@ -324,7 +311,7 @@ body.case-open .cp-top-fixed{display:flex}
   <div class="cp-next-wrap"><button class="cp-next" id="cpNext" data-hover="link">Следующий кейс →</button></div>
 </div>
 
-<!-- Лайтбокс: тап по фото → увеличить; два пальца → приблизить/отдалить -->
+<!-- Лайтбокс -->
 <div class="lightbox" id="lightbox">
   <div class="lb-top">
     <span class="lb-hint">разведи два пальца, чтобы приблизить · тяни, чтобы панорамировать</span>
@@ -379,6 +366,7 @@ function petLove(){
 }
 qs('#pixelPet').addEventListener('click',petLove);
 
+/* ФОТО кейсов */
 var COVERS={campus:'images/portfolio_main_mospoly.png',cardy:'images/portfolio_main_cardy.png'};
 var HOVERS={campus:'images/portfolio_hover_mospoly.png',cardy:'images/portfolio_hover_cardy.png'};
 
@@ -461,21 +449,20 @@ function start(){
  gsap.from('.contact-text',{y:20,opacity:0,duration:1,delay:.2,ease:'power3.out'});
  gsap.fromTo('.works-link-btn',{y:20,opacity:0},{y:0,opacity:1,duration:1,delay:.4,ease:'power3.out',clearProps:"transform,opacity"});
  gsap.from('#pixelPet',{scale:0,opacity:0,duration:.8,delay:.5,ease:'back.out(2)'});
- startAutoFocus();
+ startChipHighlight();
 }
 
-/* Авто-фокус скиллов */
-function startAutoFocus(){
-  if(REDUCED)return;
-  var skills=qsa('.floating-skill');
-  if(!skills.length)return;
-  var idx=-1;
-  function next(){
-    if(idx>=0)skills[idx].classList.remove('auto-focus');
-    idx=(idx+1)%skills.length;
-    skills[idx].classList.add('auto-focus');
-  }
-  setTimeout(function(){next();setInterval(next,2500);},2000);
+/* Подсветка тегов скиллов по очереди */
+function startChipHighlight(){
+ if(REDUCED)return;
+ var chips=qsa('.chips span');
+ if(!chips.length)return;
+ var i=-1;
+ setInterval(function(){
+   if(i>=0)chips[i].classList.remove('hl');
+   i=(i+1)%chips.length;
+   chips[i].classList.add('hl');
+ },900);
 }
 
 /* Логотипы: возврат на главную со страницы кейса */
@@ -486,14 +473,12 @@ function logoClick(){
 qs('#sideLogo').addEventListener('click',logoClick);
 qs('#mbLogo').addEventListener('click',logoClick);
 
-/* ===== Лайтбокс: нативный pinch-zoom (два пальца) + колёсико мыши ===== */
+/* ===== Лайтбокс ===== */
 var lb=qs('#lightbox'),lbImg=qs('#lbImg'),lbView=qs('#lbView');
 var scale=1,startScale=1,startDist=0;
 var panX=0,panY=0,startPanX=0,startPanY=0,lastX=0,lastY=0,dragging=false;
-
 function applyTransform(){lbImg.style.transform='translate('+panX+'px,'+panY+'px) scale('+scale+')';}
 function resetZoom(){scale=1;panX=0;panY=0;applyTransform();}
-
 function openLightbox(src){
   lbImg.src=src;resetZoom();
   lb.classList.add('open');
@@ -506,8 +491,6 @@ function closeLightbox(){
   if(lenis)lenis.start();
 }
 function dist(t){var dx=t[0].clientX-t[1].clientX,dy=t[0].clientY-t[1].clientY;return Math.hypot(dx,dy);}
-
-/* Touch: pinch двумя пальцами + панорамирование одним */
 lbView.addEventListener('touchstart',function(e){
   if(e.touches.length===2){startDist=dist(e.touches);startScale=scale;}
   else if(e.touches.length===1&&scale>1){dragging=true;lastX=e.touches[0].clientX;lastY=e.touches[0].clientY;startPanX=panX;startPanY=panY;}
@@ -527,8 +510,6 @@ lbView.addEventListener('touchmove',function(e){
   }
 },{passive:false});
 lbView.addEventListener('touchend',function(){dragging=false;});
-
-/* Десктоп: колёсико мыши зумит к курсору */
 lbView.addEventListener('wheel',function(e){
   e.preventDefault();
   var rect=lbView.getBoundingClientRect();
@@ -543,12 +524,9 @@ lbView.addEventListener('wheel',function(e){
   if(scale===1){panX=0;panY=0;}
   applyTransform();
 },{passive:false});
-
-/* Панорамирование мышью (зажатая ЛКМ) при увеличении */
 lbView.addEventListener('mousedown',function(e){if(scale>1){dragging=true;lastX=e.clientX;lastY=e.clientY;startPanX=panX;startPanY=panY;lbView.style.cursor='grabbing';}});
 addEventListener('mousemove',function(e){if(dragging&&lb.classList.contains('open')){panX=startPanX+(e.clientX-lastX);panY=startPanY+(e.clientY-lastY);applyTransform();}});
 addEventListener('mouseup',function(){dragging=false;if(lbView)lbView.style.cursor='';});
-
 qs('#lbClose').addEventListener('click',closeLightbox);
 document.addEventListener('click',function(e){
   var z=e.target.closest('img.zoomable');
@@ -563,16 +541,16 @@ if(FINE){
  (function pv(){pvX+=(pvTX-pvX)*.15;pvY+=(pvTY-pvY)*.15;var w=preview.offsetWidth/2;preview.style.transform='translate('+(pvX-w)+'px,'+(pvY-preview.offsetHeight/2)+'px)';requestAnimationFrame(pv);})();
 }
 
-/* === ИСПРАВЛЕНИЕ: Прямой вызов openCase при клике, чтобы кейс открывался всегда с первого раза === */
+/* Клик по кейсу */
 qsa('.work-row').forEach(function(r){
  if(FINE){
    r.addEventListener('mouseenter',function(){prevImg.src=HOVERS[r.dataset.id]||COVERS[r.dataset.id];preview.classList.add('on');});
    r.addEventListener('mouseleave',function(){preview.classList.remove('on');});
  }
  r.addEventListener('click',function(){
-   var id = r.dataset.id;
-   history.pushState({case:id}, '', '#case/'+id);
-   openCase(id, true); // true означает, что pushState уже сделан выше
+   var id=r.dataset.id;
+   history.pushState({case:id},'','#case/'+id);
+   openCase(id,true);
    petLove();
  });
 });
@@ -606,7 +584,6 @@ function stageHTML(s){
   h+=(s.shots||[]).map(shotHTML).join('');
   return h+'</div>';
 }
-
 function fillCase(id){var p=PROJECTS[id];
  qs('#cpTitle').textContent=p.title;
  qs('#cpMetaInline').innerHTML='<span>'+p.cat+'</span><span>'+p.role+'</span><span>'+p.stack+'</span>';
@@ -652,31 +629,97 @@ qs('#mbMail').addEventListener('click',copyMail);
 qsa('#mailCopy, .mb-mail, .soc-row, .mb-btn, .works-link-btn, .cp-back, .cp-next, .cp-home-fixed, .cp-top-fixed, a').forEach(function(el){el.addEventListener('click',petLove);});
 })();
 </script>
+
+<!-- ========== 3D-МОДЕЛЬ (three.js) ==========
+     Файл: images/shining_star.glb (GLB, до 2–3 МБ, идеально ≤1 МБ).
+     ВАЖНО: если открыть сайт двойным кликом по index.html (file://),
+     браузер блокирует загрузку .glb — запускай через локальный сервер
+     (VS Code Live Server, `npx serve` или `python -m http.server`). -->
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+
+const REDUCED=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const MODEL_PATH='images/shining_star.glb'; /* <- путь к твоей модели */
+const box=document.getElementById('modelBox');
+const hint=document.getElementById('modelHint');
+
+if(box){
+  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  box.prepend(renderer.domElement);
+
+  const scene=new THREE.Scene();
+  const camera=new THREE.PerspectiveCamera(35,1,0.1,100);
+  camera.position.set(0,0.4,4.2);
+
+  scene.add(new THREE.AmbientLight(0xffffff,1.15));
+  const dir=new THREE.DirectionalLight(0xffffff,1.7);dir.position.set(2,3,4);scene.add(dir);
+  const acid=new THREE.DirectionalLight(0xE9F26B,0.6);acid.position.set(-3,-1,-2);scene.add(acid);
+
+  let model=null;
+
+  function makeFallback(){
+    const g=new THREE.Group();
+    const geo=new THREE.IcosahedronGeometry(1.15,0);
+    const mesh=new THREE.Mesh(geo,new THREE.MeshStandardMaterial({color:0xE9F26B,flatShading:true,roughness:.45}));
+    const wire=new THREE.LineSegments(new THREE.EdgesGeometry(geo),new THREE.LineBasicMaterial({color:0x161616}));
+    g.add(mesh,wire);
+    return g;
+  }
+  function fit(obj){
+    const b=new THREE.Box3().setFromObject(obj);
+    const size=b.getSize(new THREE.Vector3());
+    const c=b.getCenter(new THREE.Vector3());
+    const s=2.3/(Math.max(size.x,size.y,size.z)||1);
+    obj.scale.setScalar(s);
+    obj.position.set(-c.x*s,-c.y*s,-c.z*s);
+    const pivot=new THREE.Group();
+    pivot.add(obj);
+    return pivot;
+  }
+
+  const draco=new DRACOLoader().setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/libs/draco/');
+  const loader=new GLTFLoader();
+  loader.setDRACOLoader(draco);
+
+  loader.load(MODEL_PATH,
+    gltf=>{
+      model=fit(gltf.scene);
+      scene.add(model);
+      if(hint)hint.textContent='3d · shining star ✷ крутится само';
+    },
+    undefined,
+    err=>{
+      console.warn('3D не загрузилась:',err);
+      model=fit(makeFallback());
+      scene.add(model);
+      if(hint){
+        hint.textContent = (location.protocol==='file:')
+          ? '3d: браузер блокирует .glb при открытии файла напрямую — запусти сайт через локальный сервер (live server)'
+          : '3d: модель не найдена (images/shining_star.glb) — показана запасная фигура';
+      }
+    }
+  );
+
+  function resize(){
+    const w=box.clientWidth,h=box.clientHeight;
+    renderer.setSize(w,h,false);
+    camera.aspect=w/h;
+    camera.updateProjectionMatrix();
+  }
+  addEventListener('resize',resize);
+  resize();
+
+  renderer.setAnimationLoop(()=>{
+    if(model&&!REDUCED)model.rotation.y+=0.005; /* медленное горизонтальное вращение */
+    renderer.render(scene,camera);
+  });
+}
+</script>
 </body>
 </html>
-
-
-              <script>
-                              qsa('.work-row').forEach(function(r){
-  // ...
-  r.addEventListener('click',function(){location.hash='case/'+r.dataset.id;petLove();});
-});
-
-document.addEventListener('click',function(e){
-  var z=e.target.closest('img.zoomable');
-  if(z){openLightbox(z.getAttribute('src'));}
-});
-
-qsa('#mailCopy, .mb-mail, .soc-row, .mb-btn, .works-link-btn, .work-row, .cp-back, .cp-next, .cp-home-fixed, .cp-top-fixed, a').forEach(function(el){el.addEventListener('click',petLove);});
-
-r.addEventListener('click',function(){
-  history.pushState({case:r.dataset.id}, '', '#case/'+r.dataset.id);
-  openCase(r.dataset.id, true); // true = skip push, так как мы уже сделали pushState
-  petLove();
-});
-
-
-              </script>
-                        </body>
-                        </html>
-                    
