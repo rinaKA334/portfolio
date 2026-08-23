@@ -90,7 +90,8 @@ body.case-open .site{display:none}
 /* ---------- Навыки + 3D ---------- */
 .skills{max-width:1100px;width:100%}
 .sec-label{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:20px;text-transform:lowercase}
-.skills-cols{display:grid;grid-template-columns:1fr minmax(280px,420px);gap:clamp(24px,4vw,60px);align-items:start}
+.skills-cols{display:flex;align-items:flex-start;gap:clamp(20px,3vw,40px)}
+.skills-left{flex:1;min-width:0}
 .skills-group{margin-bottom:44px}
 .skills-group:last-child{margin-bottom:0}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
@@ -98,10 +99,11 @@ body.case-open .site{display:none}
 .chips span:hover,.chips span.hl{background:var(--acid);border-color:var(--ink);transform:translateY(-2px)}
 .chips.learning span{border-style:dashed;color:var(--muted);background:transparent}
 .chips.learning span:hover,.chips.learning span.hl{color:var(--ink);background:var(--acid);border-style:solid;border-color:var(--ink)}
-/* 3D-блок справа от скиллов */
-.model-box{position:relative;height:480px;border:1px dashed rgba(0,0,0,.15);border-radius:16px;overflow:hidden}
+/* 3D-модель: без рамки и подписи, как часть сайта, чуть больше пиксельного персонажа */
+.model-box{position:relative;flex:none;width:150px;height:160px;margin-top:4px}
 .model-box canvas{display:block;width:100%;height:100%}
-.model-hint{position:absolute;bottom:10px;left:12px;right:12px;font-family:var(--mono);font-size:10px;color:var(--muted);pointer-events:none;line-height:1.5}
+.model-hint{display:none;position:absolute;top:100%;left:0;right:0;margin-top:8px;font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.4}
+.model-hint.err{display:block}
 
 /* ---------- Работы ---------- */
 .works{max-width:1000px;width:100%}
@@ -194,8 +196,8 @@ body.case-open .cp-top-fixed{display:flex}
   .case-page{margin-left:0;padding:76px 20px 110px}
   .work-preview{display:none!important}
   .bg-blur-circle{width:340px;height:340px;top:-80px;left:-60px}
-  .skills-cols{grid-template-columns:1fr}
-  .model-box{height:320px;order:2}
+  .skills-cols{flex-direction:column}
+  .model-box{width:130px;height:140px;order:2;align-self:center;margin-top:0}
   .cp-home-fixed{bottom:20px;right:20px}
   .cp-top-fixed{bottom:76px;right:20px}
   .cmp-table{min-width:560px}
@@ -274,10 +276,9 @@ body.case-open .cp-top-fixed{display:flex}
           </div>
         </div>
       </div>
-      <!-- 3D-модель: images/shining_star.glb (GLB, до 2–3 МБ, идеально ≤1 МБ).
-           Если открыто через file:// — браузер блокирует .glb, нужна подача через локальный сервер. -->
+      <!-- 3D-модель: images/shining_star.glb — без рамки и подписи, как часть сайта -->
       <div class="model-box" id="modelBox">
-        <div class="model-hint" id="modelHint">3d · крутится само</div>
+        <div class="model-hint" id="modelHint"></div>
       </div>
     </div>
   </section>
@@ -632,9 +633,8 @@ qsa('#mailCopy, .mb-mail, .soc-row, .mb-btn, .works-link-btn, .cp-back, .cp-next
 
 <!-- ========== 3D-МОДЕЛЬ (three.js) ==========
      Файл: images/shining_star.glb (GLB, до 2–3 МБ, идеально ≤1 МБ).
-     ВАЖНО: если открыть сайт двойным кликом по index.html (file://),
-     браузер блокирует загрузку .glb — запускай через локальный сервер
-     (VS Code Live Server, `npx serve` или `python -m http.server`). -->
+     Модель без рамки и подписи, выглядит как часть сайта.
+     ВАЖНО: запускать через локальный сервер (file:// блокирует .glb). -->
 <script type="importmap">
 {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}
 </script>
@@ -644,7 +644,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 const REDUCED=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const MODEL_PATH='images/shining_star.glb'; /* <- путь к твоей модели */
+const MODEL_PATH='images/shining_star.glb';
 const box=document.getElementById('modelBox');
 const hint=document.getElementById('modelHint');
 
@@ -655,7 +655,7 @@ if(box){
 
   const scene=new THREE.Scene();
   const camera=new THREE.PerspectiveCamera(35,1,0.1,100);
-  camera.position.set(0,0.4,4.2);
+  camera.position.set(0,0.2,4.4);
 
   scene.add(new THREE.AmbientLight(0xffffff,1.15));
   const dir=new THREE.DirectionalLight(0xffffff,1.7);dir.position.set(2,3,4);scene.add(dir);
@@ -675,7 +675,7 @@ if(box){
     const b=new THREE.Box3().setFromObject(obj);
     const size=b.getSize(new THREE.Vector3());
     const c=b.getCenter(new THREE.Vector3());
-    const s=2.3/(Math.max(size.x,size.y,size.z)||1);
+    const s=2.6/(Math.max(size.x,size.y,size.z)||1);
     obj.scale.setScalar(s);
     obj.position.set(-c.x*s,-c.y*s,-c.z*s);
     const pivot=new THREE.Group();
@@ -688,20 +688,17 @@ if(box){
   loader.setDRACOLoader(draco);
 
   loader.load(MODEL_PATH,
-    gltf=>{
-      model=fit(gltf.scene);
-      scene.add(model);
-      if(hint)hint.textContent='3d · shining star ✷ крутится само';
-    },
+    gltf=>{ model=fit(gltf.scene); scene.add(model); },
     undefined,
     err=>{
       console.warn('3D не загрузилась:',err);
       model=fit(makeFallback());
       scene.add(model);
       if(hint){
-        hint.textContent = (location.protocol==='file:')
-          ? '3d: браузер блокирует .glb при открытии файла напрямую — запусти сайт через локальный сервер (live server)'
-          : '3d: модель не найдена (images/shining_star.glb) — показана запасная фигура';
+        hint.textContent=(location.protocol==='file:')
+          ? '3d не загрузилась: нужен локальный сервер'
+          : '3d не найдена — показана запасная фигура';
+        hint.classList.add('err');
       }
     }
   );
